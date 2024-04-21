@@ -22,7 +22,5 @@ def selection_sort(x: list[int]) -> None:
         for j in range(i + 1, len(x)):
             if x[j] < x[min_index]:
                 min_index = j
-        temp = x[i]
-        x[i] = x[min_index]
-        x[min_index] = temp
+        x[i], x[min_index] = x[min_index], x[i]
     return None
